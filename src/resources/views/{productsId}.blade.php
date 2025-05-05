@@ -1,3 +1,4 @@
+<?php print_r($products) ?>
 <!DOCTYPE html>
 <html lang="ja">
 
