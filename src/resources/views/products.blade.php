@@ -82,8 +82,17 @@
           <button class="form__button-submit" type="submit">送信</button>
         </div>
       </form>
+   <div class="form__button">
+    <form action="/products/register" method="post">
+      @csrf
+      <button class="header-nav__button">+商品を追加</button>
+    </form>
+
+   </div>
+
     </div>
   </main>
 </body>
+
 
 </html>
