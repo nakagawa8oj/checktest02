@@ -76,7 +76,7 @@
           </div>
         </div>
       
-        <form action="/products" method="post">
+        <form action="/products" method="POST">
          @csrf
          <button class="header-nav__button">戻る</button>
         </form>
@@ -86,9 +86,9 @@
         </div>
       
       </form>
-    </div>
+    </div>  
 
-    <form action="/products" method="post">
+    <form action="/products" method="POST">
       @csrf
       <button class="header-nav__button">戻る</button>
     </form>

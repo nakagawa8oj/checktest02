@@ -23,7 +23,7 @@
   <main>
     <div class="confirm__content">
       <div class="confirm__heading">
-        <h2>お問い合わせ内容確認</h2>
+        <h2>商品一覧＞選択商品</h2>
       </div>
       <form class="form">
         <div class="confirm-table">
@@ -37,13 +37,25 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">値段</th>
               <td class="confirm-table__text">
-                <input type="email" name="email" value="サンプルテキスト" />
+                <input type="price" name="price" value="サンプルテキスト" />
+              </td>
+            </tr>
+            <tr class="confirm-table__row">
+              <th class="confirm-table__header">商品画像</th>
+              <td class="confirm-table__text">
+                <input type="image" name="image" value="サンプルテキスト" />
               </td>
             </tr>
             <tr class="confirm-table__row">
               <th class="confirm-table__header">季節</th>
               <td class="confirm-table__text">
-                <input type="tel" name="tel" value="サンプルテキスト" />
+                <input type="season" name="season" value="サンプルテキスト" />
+                <br>
+              <input type="radio" name="choices" value="春" />春
+              <input type="radio" name="choices" value="夏" />夏
+              <input type="radio" name="choices" value="秋" />秋
+              <input type="radio" name="choices" value="冬" />冬
+                <br>
               </td>
             </tr>
             <tr class="confirm-table__row">
@@ -52,18 +64,25 @@
                 <input type="text" name="content" value="サンプルテキスト" />
               </td>
             </tr>
-            <tr class="confirm-table__row">
-              <th class="confirm-table__header">商品画像</th>
-              <td class="confirm-table__text">
-                <input type="text" name="content" value="サンプルテキスト" />
-              </td>
-            </tr>
           </table>
         </div>
+
+        <form action="/products" method="POST">
+          @csrf
+        <button class="header-nav__button">戻る</button>
+        </form>
+
+
         <div class="form__button">
-          <button class="form__button-submit" type="submit">送信</button>
+          <button class="form__button-submit" type="submit">変更を保存</button>
         </div>
       </form>
+
+          <form action="/products" method="POST">
+          @csrf
+          <button class="header-nav__button">戻る</button>
+        </form>
+
     </div>
   </main>
 </body>
