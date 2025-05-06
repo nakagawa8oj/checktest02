@@ -27,30 +27,15 @@
       <form class="form" action="/products/{productsId}" method="post">
         @csrf
 
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">キウイ¥800</button>
-        </div>
+<a href="/products/{productsId}"><img src="src/public/storage/kiwi.png" alt="キウイ　¥800" border="0"></a>
+<a href="/products/{productsId}"><img src="src/public/storage/strawberry.png" alt="ストロベリー　¥1200" border="0"></a>
+<a href="/products/{productsId}"><img src="src/public/storage/orange.png" alt="オレンジ　¥850" border="0"></a>
+<a href="/products/{productsId}"><img src="src/public/storage/watermelon.png" alt="スイカ　¥700" border="0"></a>
+<a href="/products/{productsId}"><img src="src/public/storage/peach.png" alt="ピーチ　¥1000" border="0"></a>
+<a href="/products/{productsId}"><img src="src/public/storage/muscat.png" alt="シャインマスカット　¥1400" border="0"></a>
+];
 
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">ストロベリー¥1200</button>
-        </div>
 
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">オレンジ¥850</button>
-        </div>
-
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">スイカ¥700</button>
-        </div>
-
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">ピーチ¥1000</button>
-        </div>
-
-        <div class="form__button">
-          <button class="form__button-submit" type="submit">シャインマスカット¥1400</button>
-        </div>
-      </form>
    <div class="form__button">
     <form action="/products/register" method="post">
       @csrf
