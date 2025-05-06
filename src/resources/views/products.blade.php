@@ -26,9 +26,29 @@
       </div>
       <form class="form" action="/products/{productsId}" method="post">
         @csrf
-        
+
         <div class="form__button">
-          <button class="form__button-submit" type="submit">送信</button>
+          <button class="form__button-submit" type="submit">キウイ¥800</button>
+        </div>
+
+        <div class="form__button">
+          <button class="form__button-submit" type="submit">ストロベリー¥1200</button>
+        </div>
+
+        <div class="form__button">
+          <button class="form__button-submit" type="submit">オレンジ¥850</button>
+        </div>
+
+        <div class="form__button">
+          <button class="form__button-submit" type="submit">スイカ¥700</button>
+        </div>
+
+        <div class="form__button">
+          <button class="form__button-submit" type="submit">ピーチ¥1000</button>
+        </div>
+
+        <div class="form__button">
+          <button class="form__button-submit" type="submit">シャインマスカット¥1400</button>
         </div>
       </form>
    <div class="form__button">
