@@ -15,4 +15,9 @@ class ProductsController extends Controller
         return view('{productsId}', ['products' => $products]);
     }
 
+ public function register(Request $request){
+        $products = $request->only(['name', 'email', 'tel', 'content']);
+        return view('register', ['products' => $products]);
+    }
+
 }
