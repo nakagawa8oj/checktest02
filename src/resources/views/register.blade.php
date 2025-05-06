@@ -75,17 +75,20 @@
             </div>
           </div>
         </div>
-        <form action="/products" method="get">
-      @csrf
-      <button class="header-nav__button">戻る</button>
+      
+        <form action="/products" method="post">
+         @csrf
+         <button class="header-nav__button">戻る</button>
         </form>
+      
         <div class="form__button">
           <button class="form__button-submit" type="submit">登録</button>
         </div>
+      
       </form>
     </div>
 
-    <form action="/products" method="get">
+    <form action="/products" method="post">
       @csrf
       <button class="header-nav__button">戻る</button>
     </form>
