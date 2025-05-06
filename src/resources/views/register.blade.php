@@ -12,11 +12,7 @@
 
 <body>
   <header class="header">
-    <div class="header__inner">
-      <a class="header__logo" href="/">
-        戻る
-      </a>
-    </div>
+
   </header>
 
   <main>
@@ -82,6 +78,12 @@
         </div>
       </form>
     </div>
+
+    <form action="/products" method="get">
+      @csrf
+      <button class="header-nav__button">戻る</button>
+    </form>
+
   </main>
 </body>
 
