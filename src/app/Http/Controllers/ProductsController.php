@@ -34,4 +34,9 @@ class ProductsController extends Controller
         ];
         return view('find', $param);
     }
+
+    public function create()
+    {
+        return view('create');
+    }
 }
