@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Models\FruitImage;
 
 class ProductsController extends Controller
 {
@@ -35,8 +36,25 @@ class ProductsController extends Controller
         return view('find', $param);
     }
 
-    public function create()
+ public function create()
     {
         return view('create');
     }
+ 
+ public function index()
+    {
+        $products = Produsts::all();
+        return view('index', ['products' => $products]);
+    }
+ public function store(Request $request)
+{
+    $image = $request->file('image');
+    $path = $image->store('public/storage');
+ 
+    $model = new FruitImage;
+    $model->path = $path;
+    $model->save();
+ 
+    return redirect()->route('index');
+}
 }

@@ -15,3 +15,9 @@ use App\Http\Controllers\ProductsController;
  
  Route::get('/find', [ProductsController::class, 'find']);
  Route::post('/find', [ProductsController::class, 'search']);
+
+Route::get('/', [App\Http\Controllers\ProductsController::class, 'index'])->name('index');
+Route::get('/create', [App\Http\Controllers\ProductsController::class, 'create'])->name('create');
+Route::get('/', [ProductsController::class, 'index']);
+Route::post('/image_upload', [App\Http\Controllers\ProductsController::class, 'store'])->name('image_upload');
+
