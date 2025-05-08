@@ -21,6 +21,16 @@ class ProductsController extends Controller
         return view('register', ['products' => $products]);
     }
 
+ public function register2(){
+       return view('register2');
+    }
+
+    public function create(Request $request){
+        $form = $request->all();
+        Product::create($form);
+        return redirect('/products');
+    }
+
     public function find()
     {
         return view('find', ['input' => '']);
@@ -36,10 +46,6 @@ class ProductsController extends Controller
         return view('find', $param);
     }
 
- public function create()
-    {
-        return view('create');
-    }
  
  public function index()
     {
