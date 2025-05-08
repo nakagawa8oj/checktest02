@@ -3,12 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 
+ Route::post('/products/register', [ProductsController::class, 'register']);
+ Route::get('/products/register', [ProductsController::class, 'register']);
 
  Route::get('/products', [ProductsController::class, 'products']);
  Route::post('/products', [ProductsController::class, 'products']);
- 
- Route::get('/products/register', [ProductsController::class, 'register']);
- Route::post('/products/register', [ProductsController::class, 'register']);
 
  Route::get('/register2', [ProductsController::class, 'register2']);
  

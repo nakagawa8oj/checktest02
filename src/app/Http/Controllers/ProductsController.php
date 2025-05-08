@@ -38,7 +38,7 @@ class ProductsController extends Controller
 
     public function search(Request $request)
     {
-        $item = Author::where('name', 'LIKE',"%{$request->input}%")->first();
+        $item = Product::where('name', 'LIKE',"%{$request->input}%")->first();
         $param = [
             'input' => $request->input,
             'item' => $item
@@ -46,6 +46,13 @@ class ProductsController extends Controller
         return view('find', $param);
     }
 
+     public function bind(Products $product)
+    {
+        $data = [
+            'item'=>$product,
+        ];
+        return view('product.binds', $data);
+    }
  
  public function index()
     {

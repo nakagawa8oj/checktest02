@@ -24,7 +24,7 @@
     <th>price</th>
     <th>content</th>
   </tr>
-  @foreach ($products as $author)
+  @foreach ($products as $product)
   <tr>
     <td>{{$product->id}}</td>
     <td>{{$product->name}}</td>

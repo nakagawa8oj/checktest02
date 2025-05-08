@@ -11,4 +11,10 @@ class Product extends Model
 
   protected $fillable = ['name', 'price', 'seasons','content'];
 
+  public function getDetail()
+  {
+    $txt = 'ID:'.$this->id . ' ' . $this->name . '(' . $this->price .  '才'.') '.$this->nationality;
+    return $txt;
+  }
+
 }
